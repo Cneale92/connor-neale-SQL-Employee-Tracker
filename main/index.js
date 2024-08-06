@@ -14,3 +14,14 @@ const pool = new Pool(
 
 pool.connect();
 
+// init function to welcome the user and call the function so the user can see the prompts prompts. 
+function init() {
+    console.log('');
+    console.log('Employee Tracker Application by Connor Neale');
+    console.log('--------------------------------------------');
+    mainSelectionPrompt();
+}
+
+// Starts the application
+init();
+
