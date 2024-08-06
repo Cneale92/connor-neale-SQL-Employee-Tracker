@@ -34,3 +34,6 @@ CREATE TABLE employee (
     FOREIGN KEY (manager_id)
     REFERENCES employee(id)
 );
+
+-- runs the seeds.sql file after creating the database, selecting the databse and making the tables
+\i seeds.sql
