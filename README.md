@@ -3,7 +3,7 @@ This is an employee tracker application created using SQL and it is run using Po
 
 ### Video walkthrough showing application functionality:
 
-
+Video demonstartion of the application [here](https://ooo.mmhmm.app/watch/z_gx0yE3fKkoTlNiU66y2C)
      
 ## Table of Contents
             
