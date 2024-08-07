@@ -27,8 +27,8 @@ To use this application, you will need PostgreSQL installed on your computer. [V
 Once PostgreSQL is installed on your computer, you will need to initialise the 'employee_db' database and seed data into it. To do so, enter the following commands once navigated to the project folder in your terminal:
 
 1. 'psql -U postgres' - This will start PostgreSQL. Enter your password if you set one up. 
-2. '\i main/db/schema.sql' - To set up the 'employee_db' database.
-3. '\i main/db/seed.sql' - To seed the 'employee_db' database with some employee information. 
+2. '\i schema.sql' - To set up the 'employee_db' database.
+3. '\i seed.sql' - To seed the 'employee_db' database with some employee information. 
 
 The last step is to run the application by entering:
 
