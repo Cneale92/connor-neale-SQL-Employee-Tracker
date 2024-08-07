@@ -28,7 +28,8 @@ Once PostgreSQL is installed on your computer, you will need to initialise the '
 
 1. 'psql -U postgres' - This will start PostgreSQL. Enter your password if you set one up. 
 2. '\i schema.sql' - To set up the 'employee_db' database.
-3. '\i seed.sql' - To seed the 'employee_db' database with some employee information. 
+3. '\i seed.sql' - To seed the 'employee_db' database with some employee information.
+4. Finally, you will need to add your user login information for PostgresSQL in the index.js. 
 
 The last step is to run the application by entering:
 
