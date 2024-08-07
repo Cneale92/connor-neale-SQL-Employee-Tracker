@@ -1,7 +1,7 @@
 -- this file will send data to populate the tables in the 
 
 -- INSERT INTO will add the data to the to the corresponding tables in the database 
-INSERT INTO department(department_name)
+INSERT INTO department(name)
 VALUES  ('Development'),                        
         ('Marketing'),                          
         ('Finance'),                            

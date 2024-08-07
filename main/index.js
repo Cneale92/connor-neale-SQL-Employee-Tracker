@@ -84,7 +84,7 @@ function viewDepartments() {
 function viewRoles() {
     // SQL query to our connected 'pool' to select all from the 'role' table and join the respective department based on its ID.  
     pool.query(
-        `SELECT title, role.id, department.department_name, salary 
+        `SELECT title, role.id, department.name, salary 
             FROM role 
                 JOIN department 
                     ON role.department_id = department.id;`
@@ -100,7 +100,7 @@ function viewRoles() {
 // Shows a list of all employees
 function viewEmployees() {
     pool.query(
-        `SELECT e.id, e.first_name, e.last_name, role.title, department.department_name AS department, role.salary, CONCAT(m.first_name, ' ', m.last_name) AS manager 
+        `SELECT e.id, e.first_name, e.last_name, role.title, department.name AS department, role.salary, CONCAT(m.first_name, ' ', m.last_name) AS manager 
             FROM employee e
                 INNER JOIN role 
                     ON e.role_id = role.id 
@@ -128,7 +128,7 @@ function addDepartment() {
         }
     ]).then((response) => {
         pool.query(
-            `INSERT INTO department(department_name) VALUES ('${response.newDepartmentName}')`
+            `INSERT INTO department(name) VALUES ('${response.newDepartmentName}')`
         , (err, result) => {
             if (err) {
                 console.error('Error adding department', err);
@@ -141,7 +141,7 @@ function addDepartment() {
 
 // Adds a new role to the role table
 function addRole() {
-    pool.query('SELECT ARRAY(SELECT department_name FROM department) AS department_names_array', (err, res) => {
+    pool.query('SELECT ARRAY(SELECT name FROM department) AS department_names_array', (err, res) => {
         if (err) {
           console.error(err);
           return;
